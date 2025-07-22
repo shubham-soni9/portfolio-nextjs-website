@@ -19,30 +19,19 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        Having <span className="font-medium">7+ years</span> of native Android development in leading companies like{" "}
+        <span className="font-medium">Freshworks, Meesho, Rebel Foods (Faasos) and Jugnoo</span>. I've worked over{" "}
+        <span className="font-medium">12 projects</span> including 6 projects from scratch and improved several other products and scaled to{" "}
+        <span className="font-medium">10+ million active users</span>.{" "}
+        <span className="italic">My domain experience</span> spans{" "}
+        <span className="font-medium">SaaS, E-commerce, Food, Delivery and Taxi</span>. I've been part of the core team and handled several small teams independently from requirement to release.
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        <span className="italic">When I'm not coding</span>, I enjoy{" "}
+        <span className="font-medium">Investment Strategy, Startup News, Entrepreneurship</span>, and working on{" "}
+        <span className="font-medium">open source projects</span>. I'm also an{" "}
+        <span className="font-medium">AI Enthusiast</span> and always looking to learn new technologies and stay updated with the latest trends in mobile development.
       </p>
     </motion.section>
   );
