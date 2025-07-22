@@ -6,6 +6,9 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import freshdeskImg from "@/public/freshdesk.png";
+import meeshoImg from "@/public/meesho.webp";
+import eatsureImg from "@/public/eatsure.webp";
+import slayImg from "@/public/slay.png";
 
 export const links = [
   {
@@ -91,7 +94,7 @@ export const projectsData = [
     description:
       "Largest e-commerce application with over 10+ million daily active user base with 99.8% crash-free users. Led Android app development with 100+ million downloads, implemented Multi-module MVVM architecture, and achieved significant performance improvements.",
     tags: ["Android", "Kotlin", "Java", "RxJava", "Room", "MVVM", "Multi-module"],
-    imageUrl: corpcommentImg,
+    imageUrl: meeshoImg,
     url: "https://play.google.com/store/apps/details?id=com.meesho.supply",
   },
   {
@@ -99,7 +102,7 @@ export const projectsData = [
     description:
       "Multi-brand food ordering app. Created with a team of 3 developers from scratch to 50k+ DAU. Redesigned and developed from architectural decision to finished product with 99.5% crash-free users.",
     tags: ["Android", "Kotlin", "Coroutines", "Jetpack Components", "MVVM"],
-    imageUrl: rmtdevImg,
+    imageUrl: eatsureImg,
     url: "https://play.google.com/store/apps/details?id=com.done.faasos",
   },
   {
@@ -107,7 +110,7 @@ export const projectsData = [
     description:
       "Independently worked on a coffee booking app for Bangalore-based coffee brand known as SLAY. Implemented from scratch in 3 months with coroutine and jetpack components.",
     tags: ["Android", "Kotlin", "Coroutines", "Jetpack Components"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: slayImg,
     url: "#",
   },
   {
