@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import freshdeskImg from "@/public/freshdesk.png";
 
 export const links = [
   {
@@ -78,11 +79,11 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Freshdesk Helpdesk",
+    title: "Freshdesk",
     description:
       "Enterprise-grade helpdesk and customer support application. Leading Android development for this global SaaS platform with millions of users worldwide. Focused on delivering exceptional user experience, scalability, and performance for customer service teams.",
     tags: ["Android", "Kotlin", "Enterprise", "SaaS", "Customer Support", "Helpdesk"],
-    imageUrl: corpcommentImg,
+    imageUrl: freshdeskImg,
     url: "https://play.google.com/store/apps/details?id=com.freshdesk.helpdesk",
   },
   {
