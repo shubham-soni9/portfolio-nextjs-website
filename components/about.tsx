@@ -19,12 +19,12 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        Having <span className="font-medium">6.5 years</span> of native Android development in leading startups like{" "}
-        <span className="font-medium">Meesho, Rebel Foods (Faasos) and Jugnoo</span>. I've worked over{" "}
+        Having <span className="font-medium">7+ years</span> of native Android development in leading companies like{" "}
+        <span className="font-medium">Freshworks, Meesho, Rebel Foods (Faasos) and Jugnoo</span>. I've worked over{" "}
         <span className="font-medium">12 projects</span> including 6 projects from scratch and improved several other products and scaled to{" "}
         <span className="font-medium">10+ million active users</span>.{" "}
         <span className="italic">My domain experience</span> spans{" "}
-        <span className="font-medium">Taxi, Food, Delivery and E-commerce, SaaS</span>. I've been part of the core team and handled several small teams independently from requirement to release.
+        <span className="font-medium">SaaS, E-commerce, Food, Delivery and Taxi</span>. I've been part of the core team and handled several small teams independently from requirement to release.
       </p>
 
       <p>

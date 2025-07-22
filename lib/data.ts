@@ -35,6 +35,14 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Lead Android Engineer",
+    location: "Freshworks, Chennai, Tamil Nadu, India",
+    description:
+      "Leading Android development initiatives at Freshworks, a global SaaS company. Working on enterprise-grade applications with focus on scalability, performance, and user experience. Collaborating with cross-functional teams to deliver high-quality mobile solutions.",
+    icon: React.createElement(CgWorkAlt),
+    date: "10/2023 - Present",
+  },
+  {
     title: "Software Engineer - III",
     location: "Meesho, Bengaluru, India",
     description:
