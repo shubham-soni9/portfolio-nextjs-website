@@ -78,11 +78,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Freshdesk Helpdesk",
+    description:
+      "Enterprise-grade helpdesk and customer support application. Leading Android development for this global SaaS platform with millions of users worldwide. Focused on delivering exceptional user experience, scalability, and performance for customer service teams.",
+    tags: ["Android", "Kotlin", "Enterprise", "SaaS", "Customer Support", "Helpdesk"],
+    imageUrl: corpcommentImg,
+    url: "https://play.google.com/store/apps/details?id=com.freshdesk.helpdesk",
+  },
+  {
     title: "Meesho",
     description:
       "Largest e-commerce application with over 10+ million daily active user base with 99.8% crash-free users. Led Android app development with 100+ million downloads, implemented Multi-module MVVM architecture, and achieved significant performance improvements.",
     tags: ["Android", "Kotlin", "Java", "RxJava", "Room", "MVVM", "Multi-module"],
     imageUrl: corpcommentImg,
+    url: "https://play.google.com/store/apps/details?id=com.meesho.supply",
   },
   {
     title: "Eatsure",
@@ -90,6 +99,7 @@ export const projectsData = [
       "Multi-brand food ordering app. Created with a team of 3 developers from scratch to 50k+ DAU. Redesigned and developed from architectural decision to finished product with 99.5% crash-free users.",
     tags: ["Android", "Kotlin", "Coroutines", "Jetpack Components", "MVVM"],
     imageUrl: rmtdevImg,
+    url: "https://play.google.com/store/apps/details?id=com.done.faasos",
   },
   {
     title: "Slay Coffee",
@@ -97,6 +107,7 @@ export const projectsData = [
       "Independently worked on a coffee booking app for Bangalore-based coffee brand known as SLAY. Implemented from scratch in 3 months with coroutine and jetpack components.",
     tags: ["Android", "Kotlin", "Coroutines", "Jetpack Components"],
     imageUrl: wordanalyticsImg,
+    url: "#",
   },
   {
     title: "Tookan Agent",
@@ -104,6 +115,7 @@ export const projectsData = [
       "Android lead of Tookan delivery app for the taxi and delivery workflow over 5 Lakh users. Part of the core team handling delivery applications for 1500+ businesses.",
     tags: ["Android", "Java", "Delivery System", "Multi-app Architecture"],
     imageUrl: corpcommentImg,
+    url: "https://play.google.com/store/apps/details?id=com.tookan.agent",
   },
   {
     title: "Tookan Manager",
@@ -111,6 +123,7 @@ export const projectsData = [
       "Individually revamped Manager app to help and maintain multiple agents by managers. Designed and implemented delivery management system.",
     tags: ["Android", "Java", "Management System", "Multi-agent"],
     imageUrl: rmtdevImg,
+    url: "https://play.google.com/store/apps/details?id=com.tookan.manager",
   },
   {
     title: "Yelo Marketplace",
@@ -118,6 +131,7 @@ export const projectsData = [
       "Developed Multi-shop marketplace to deliver and manage large shop groups. Achieved 20% increase in monthly orders.",
     tags: ["Android", "Marketplace", "Multi-shop", "E-commerce"],
     imageUrl: wordanalyticsImg,
+    url: "https://play.google.com/store/apps/details?id=com.yelo.merchantapp",
   },
   {
     title: "Instavans",
@@ -125,6 +139,7 @@ export const projectsData = [
       "Made agent app for 1k+ transport trucks on-demand booking and tracking. Optimized app experiences for transport logistics.",
     tags: ["Android", "Transport", "Booking System", "Tracking"],
     imageUrl: corpcommentImg,
+    url: "https://instavans.com/",
   },
   {
     title: "Tracking SDK",
@@ -132,6 +147,7 @@ export const projectsData = [
       "Maintained in-house library of delivery tracking and management. Created reusable components for delivery tracking across multiple applications.",
     tags: ["Android", "SDK", "Library", "Tracking", "Delivery"],
     imageUrl: rmtdevImg,
+    url: "https://docs.jungleworks.com/tookan/sdk/android",
   },
 ] as const;
 
