@@ -35,73 +35,133 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Software Engineer - III",
+    location: "Meesho, Bengaluru, India",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Led the Meesho Android app's design and development with over 100+ million downloads. Increased user experience by working on quality checks, user ratings and reviews which led to a 15% reduction in product returns. Developed using RxJava, Room, 70% Kotlin, and 30% Java, implementing Multi-module MVVM architecture. Boosted build speed by 30% using modular project organisation and clean architecture. Executed optimizations to reduce API costs achieving 12-15% monthly reduction and cost savings of 100K dollars. Implemented measures to reduce APK size by 40% and address ANR for app optimisation. Drove 25% higher user engagement with innovative widgets and improved search screens. Slashed 30% time of deployment with robust code reviews and CI/CD pipelines.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "03/2022 - 06/2023",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Software Engineer - II",
+    location: "Rebel Foods, Mumbai, India",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Redesigned and developed a new product from scratch known as Eatsure. Headed a team from architectural decision to finished product with 99.5% crash-free users maintained with 10m+ downloads. Implemented Slay Coffee app from scratch independently in 3 months with coroutine and jetpack components. Achieved 30% fewer bug reports and 15% app performance improvement in live projects like Over Story and Behrouz Biryani.",
+    icon: React.createElement(CgWorkAlt),
+    date: "02/2020 - 02/2022",
+  },
+  {
+    title: "Software Engineer - I",
+    location: "Jungleworks, Chandigarh, India",
+    description:
+      "Designed and implemented 3 delivery applications Agent, Manager and Customer app under a single product Tookan for handling 1500+ businesses that required 3 lakh delivery drivers. Delivered all projects on time, including Yelo Marketspace (20% increase in monthly orders). Created and optimized app experiences for client projects like Honest Bee and Instavans. Maintained a 90% client satisfaction rate by efficiently managing the dev and release cycle with seamless requirements gathering.",
+    icon: React.createElement(CgWorkAlt),
+    date: "08/2017 - 01/2020",
+  },
+  {
+    title: "Bachelor of Engineering",
+    location: "Acropolis Institute, Indore, M.P., India",
+    description:
+      "Major in Computer science & engineering",
+    icon: React.createElement(LuGraduationCap),
+    date: "07/2013 - 07/2017",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Meesho",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "Largest e-commerce application with over 10+ million daily active user base with 99.8% crash-free users. Led Android app development with 100+ million downloads, implemented Multi-module MVVM architecture, and achieved significant performance improvements.",
+    tags: ["Android", "Kotlin", "Java", "RxJava", "Room", "MVVM", "Multi-module"],
     imageUrl: corpcommentImg,
   },
   {
-    title: "rmtDev",
+    title: "Eatsure",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "Multi-brand food ordering app. Created with a team of 3 developers from scratch to 50k+ DAU. Redesigned and developed from architectural decision to finished product with 99.5% crash-free users.",
+    tags: ["Android", "Kotlin", "Coroutines", "Jetpack Components", "MVVM"],
     imageUrl: rmtdevImg,
   },
   {
-    title: "Word Analytics",
+    title: "Slay Coffee",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "Independently worked on a coffee booking app for Bangalore-based coffee brand known as SLAY. Implemented from scratch in 3 months with coroutine and jetpack components.",
+    tags: ["Android", "Kotlin", "Coroutines", "Jetpack Components"],
     imageUrl: wordanalyticsImg,
+  },
+  {
+    title: "Tookan Agent",
+    description:
+      "Android lead of Tookan delivery app for the taxi and delivery workflow over 5 Lakh users. Part of the core team handling delivery applications for 1500+ businesses.",
+    tags: ["Android", "Java", "Delivery System", "Multi-app Architecture"],
+    imageUrl: corpcommentImg,
+  },
+  {
+    title: "Tookan Manager",
+    description:
+      "Individually revamped Manager app to help and maintain multiple agents by managers. Designed and implemented delivery management system.",
+    tags: ["Android", "Java", "Management System", "Multi-agent"],
+    imageUrl: rmtdevImg,
+  },
+  {
+    title: "Yelo Marketplace",
+    description:
+      "Developed Multi-shop marketplace to deliver and manage large shop groups. Achieved 20% increase in monthly orders.",
+    tags: ["Android", "Marketplace", "Multi-shop", "E-commerce"],
+    imageUrl: wordanalyticsImg,
+  },
+  {
+    title: "Instavans",
+    description:
+      "Made agent app for 1k+ transport trucks on-demand booking and tracking. Optimized app experiences for transport logistics.",
+    tags: ["Android", "Transport", "Booking System", "Tracking"],
+    imageUrl: corpcommentImg,
+  },
+  {
+    title: "Tracking SDK",
+    description:
+      "Maintained in-house library of delivery tracking and management. Created reusable components for delivery tracking across multiple applications.",
+    tags: ["Android", "SDK", "Library", "Tracking", "Delivery"],
+    imageUrl: rmtdevImg,
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
+  "Java",
+  "Kotlin", 
+  "Android",
+  "Firebase",
+  "Compose",
+  "RxJava",
   "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "SQLite",
+  "XML",
+  "Room",
+  "Coroutines",
+  "Realm",
+  "Glide",
+  "Picasso",
+  "Retrofit",
+  "Dagger",
+  "Hilt",
+  "MVC",
+  "MVP",
+  "MVVM",
+  "Clean Architecture",
+  "CI/CD",
+  "Jetpack Components",
+  "Library Creation",
+  "Concurrency",
+  "OOP",
+  "REST API",
+  "Multi-Module Architecture",
+  "Frontend",
+  "Slack",
+  "Jira",
+  "Zeplin",
+  "Figma",
+  "Basecamp",
+  "Bitbucket",
+  "GitLab",
 ] as const;
