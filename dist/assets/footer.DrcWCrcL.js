@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime.jK7U2TdY.js";import"./index.B80Lgev0.js";function s(){return e.jsx("footer",{className:"mb-10 px-4 text-center text-gray-500",children:e.jsx("small",{className:"mb-2 block text-xs",children:"© 2025 Shubham Soni. All rights reserved."})})}export{s as default};

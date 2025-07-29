@@ -1,9 +1,5 @@
-"use client";
-
-import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
@@ -30,13 +26,9 @@ export default function Intro() {
               duration: 0.2,
             }}
           >
-            <Image
+            <img
               src="/profile.jpg"
               alt="Shubham Soni"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
               className="h-32 w-32 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
@@ -77,7 +69,7 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Link
+        <a
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
@@ -87,7 +79,7 @@ export default function Intro() {
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
+        </a>
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"

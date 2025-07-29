@@ -1,8 +1,5 @@
-"use client";
-
 import { useRef, useState } from "react";
 import { projectsData } from "@/lib/data";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
@@ -57,11 +54,10 @@ export default function Project({
               className="relative w-full h-64 rounded-lg overflow-hidden cursor-pointer"
               onClick={() => setIsImageExpanded(true)}
             >
-              <Image
+              <img
                 src={imageUrl}
                 alt={`${title} mobile app screenshot`}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-300"
+                className="object-cover hover:scale-105 transition-transform duration-300 w-full h-full"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span className="text-white font-medium">Click to view full image</span>
@@ -76,11 +72,10 @@ export default function Project({
             className="relative w-full h-64 rounded-t-lg shadow-2xl overflow-hidden cursor-pointer"
             onClick={() => setIsImageExpanded(true)}
           >
-            <Image
+            <img
               src={imageUrl}
               alt={`${title} mobile app screenshot`}
-              fill
-              className="object-cover transition-all duration-300
+              className="object-cover transition-all duration-300 w-full h-full
                 group-hover:scale-110
                 group-hover:-translate-x-3
                 group-hover:translate-y-3
@@ -113,11 +108,10 @@ export default function Project({
           onClick={() => setIsImageExpanded(false)}
         >
           <div className="relative max-w-4xl max-h-[90vh] w-full h-full">
-            <Image
+            <img
               src={imageUrl}
               alt={`${title} mobile app screenshot - Full view`}
-              fill
-              className="object-contain"
+              className="object-contain w-full h-full"
             />
             <button
               onClick={() => setIsImageExpanded(false)}

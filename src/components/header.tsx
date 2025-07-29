@@ -1,9 +1,6 @@
-"use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
-import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -28,7 +25,7 @@ export default function Header() {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
-              <Link
+              <a
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                   {
@@ -55,7 +52,7 @@ export default function Header() {
                     }}
                   ></motion.span>
                 )}
-              </Link>
+                              </a>
             </motion.li>
           ))}
         </ul>

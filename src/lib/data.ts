@@ -2,13 +2,13 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
-import freshdeskImg from "@/public/freshdesk.png";
-import meeshoImg from "@/public/meesho.webp";
-import eatsureImg from "@/public/eatsure.webp";
-import slayImg from "@/public/slay.png";
+const corpcommentImg = "/corpcomment.png";
+const rmtdevImg = "/rmtdev.png";
+const wordanalyticsImg = "/wordanalytics.png";
+const freshdeskImg = "/freshdesk.png";
+const meeshoImg = "/meesho.webp";
+const eatsureImg = "/eatsure.webp";
+const slayImg = "/slay.png";
 
 export const links = [
   {
