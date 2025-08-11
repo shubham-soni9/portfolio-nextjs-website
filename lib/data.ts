@@ -80,7 +80,7 @@ export const projectsData = [
     years: "2023 - Present",
     projectType: "Native",
     industry: "SaaS / Customer Support",
-    downloads: "10M+",
+    downloads: "100K+",
   },
   {
     title: "Meesho",
@@ -93,7 +93,7 @@ export const projectsData = [
     years: "2022 - 2023",
     projectType: "Native",
     industry: "E-commerce",
-    downloads: "100M+",
+    downloads: "500M+",
   },
   {
     title: "Eatsure",
@@ -119,7 +119,7 @@ export const projectsData = [
     years: "2021 - 2022",
     projectType: "Native",
     industry: "Food & Beverage",
-    downloads: "100K+",
+    downloads: "10K+",
   },
   {
     title: "Tookan Agent",
@@ -132,33 +132,7 @@ export const projectsData = [
     years: "2017 - 2020",
     projectType: "Native",
     industry: "Logistics & Delivery",
-    downloads: "5M+",
-  },
-  {
-    title: "Tookan Manager",
-    description:
-      "Individually revamped Manager app to help and maintain multiple agents by managers. Designed and implemented delivery management system.",
-    tags: ["Android", "Java", "Management System", "Multi-agent"],
-    imageUrl: rmtdevImg,
-    url: "https://play.google.com/store/apps/details?id=com.tookan.manager",
-    company: "Jungleworks",
-    years: "2017 - 2020",
-    projectType: "Native",
-    industry: "Logistics & Delivery",
-    downloads: "1M+",
-  },
-  {
-    title: "Yelo Marketplace",
-    description:
-      "Developed Multi-shop marketplace to deliver and manage large shop groups. Achieved 20% increase in monthly orders.",
-    tags: ["Android", "Marketplace", "Multi-shop", "E-commerce"],
-    imageUrl: wordanalyticsImg,
-    url: "https://play.google.com/store/apps/details?id=com.yelo.merchantapp",
-    company: "Jungleworks",
-    years: "2018 - 2020",
-    projectType: "Native",
-    industry: "E-commerce",
-    downloads: "500K+",
+    downloads: "5K+",
   },
   {
     title: "Instavans",
@@ -171,7 +145,7 @@ export const projectsData = [
     years: "2018 - 2020",
     projectType: "Native",
     industry: "Transportation",
-    downloads: "100K+",
+    downloads: "10K+",
   },
   {
     title: "Tracking SDK",
@@ -184,8 +158,32 @@ export const projectsData = [
     years: "2018 - 2020",
     projectType: "Native",
     industry: "Logistics & Delivery",
-    downloads: "N/A",
-  },
+    downloads: "10K+",
+  },{
+    title: "Tookan Manager",
+    description:
+      "Individually revamped Manager app to help and maintain multiple agents by managers. Designed and implemented delivery management system.",
+    tags: ["Android", "Java", "Management System", "Multi-agent"],
+    imageUrl: rmtdevImg,
+    url: "https://play.google.com/store/apps/details?id=com.tookan.manager",
+    company: "Jungleworks",
+    years: "2017 - 2020",
+    projectType: "Native",
+    industry: "Logistics & Delivery",
+    downloads: "1K+",
+  } ,{
+    title: "Yelo Marketplace",
+    description:
+      "Developed Multi-shop marketplace to deliver and manage large shop groups. Achieved 20% increase in monthly orders.",
+    tags: ["Android", "Marketplace", "Multi-shop", "E-commerce"],
+    imageUrl: wordanalyticsImg,
+    url: "https://play.google.com/store/apps/details?id=com.yelo.merchantapp",
+    company: "Jungleworks",
+    years: "2018 - 2020",
+    projectType: "Native",
+    industry: "E-commerce",
+    downloads: "50+",
+  }
 ] as const;
 
 export const skillsData = [
