@@ -43,10 +43,12 @@ export default function Intro() {
         <div className="flex-1 max-w-4xl">
           {/* Header */}
           <h1 className="mb-6 text-2xl font-medium !leading-[1.5] sm:text-3xl lg:text-4xl">
-            <span className="font-bold">Hello, I'm Shubham.</span> I'm an{" "}
-            <span className="font-bold">Android Developer</span> with{" "}
-            <span className="font-bold">8+ years</span> of experience building mobile apps.
-          </h1>
+  <span className="font-bold">Hello, I'm Shubham. </span>  
+  An experienced <span className="font-bold">Android Developer</span> with over  
+  <span className="font-bold"> 8 years</span> of expertise in designing, developing, and delivering  
+  high-quality mobile applications that drive results.
+</h1>
+
 
           {/* Skills Section - Horizontal Layout */}
           <div className="mb-8">
