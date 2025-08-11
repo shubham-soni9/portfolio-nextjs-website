@@ -17,11 +17,6 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      {/* Debug div to test visibility */}
-      <div className="bg-red-500 p-4 text-white mb-4">
-        Experience Component is rendering - {experiencesData.length} experiences found
-      </div>
-      
       <SectionHeading>My experience</SectionHeading>
       
       {/* Vertical timeline with explicit visibility styles */}
