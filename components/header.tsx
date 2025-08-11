@@ -16,42 +16,42 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[999] bg-white/80 backdrop-blur-md border-b border-gray-200 dark:bg-gray-950/80 dark:border-gray-800">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo/Name */}
-          <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-gray-900 dark:text-white">
-              Shubham Soni
-            </span>
-          </div>
+             <nav className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+         <div className="flex items-center justify-between h-16 w-full">
+           {/* Logo/Name - Aligned to left */}
+           <div className="flex-shrink-0">
+             <span className="text-xl font-bold text-gray-900 dark:text-white">
+               Shubham Soni
+             </span>
+           </div>
 
-          {/* Navigation Links */}
-          <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
-              {links.map((link) => (
-                <Link
-                  key={link.hash}
-                  href={link.hash}
-                  className={clsx(
-                    "text-sm font-medium transition-colors duration-200",
-                    {
-                      "text-blue-600 dark:text-blue-400": activeSection === link.name,
-                      "text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white": activeSection !== link.name,
-                    }
-                  )}
-                  onClick={() => {
-                    setActiveSection(link.name);
-                    setTimeOfLastClick(Date.now());
-                  }}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
+           {/* Navigation Links - Centered */}
+           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+             <div className="flex items-center space-x-8">
+               {links.map((link) => (
+                 <Link
+                   key={link.hash}
+                   href={link.hash}
+                   className={clsx(
+                     "text-sm font-medium transition-colors duration-200",
+                     {
+                       "text-blue-600 dark:text-blue-400": activeSection === link.name,
+                       "text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white": activeSection !== link.name,
+                     }
+                   )}
+                   onClick={() => {
+                     setActiveSection(link.name);
+                     setTimeOfLastClick(Date.now());
+                   }}
+                 >
+                   {link.name}
+                 </Link>
+               ))}
+             </div>
+           </div>
 
-          {/* Action Buttons */}
-          <div className="flex items-center space-x-4">
+           {/* Action Buttons - Aligned to right */}
+           <div className="flex items-center space-x-4 ml-auto">
             <a
               href="/CV.pdf"
               target="_blank"
