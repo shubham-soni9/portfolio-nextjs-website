@@ -18,7 +18,7 @@ export default function Experience() {
         {experiencesData.map((item, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800/50 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow"
+            className="bg-white/50 dark:bg-white/5 rounded-lg p-6 border border-gray-200 dark:border-white/10 hover:bg-white/70 dark:hover:bg-white/10 transition-colors"
           >
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
