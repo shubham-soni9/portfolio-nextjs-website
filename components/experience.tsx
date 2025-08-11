@@ -11,10 +11,10 @@ export default function Experience() {
   const { theme } = useTheme();
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section id="experience" ref={ref} className="scroll-mt-28 mb-14 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
       
-      <div className="space-y-8 max-w-4xl mx-auto">
+      <div className="space-y-8 w-full">
         {experiencesData.map((item, index) => (
           <div
             key={index}

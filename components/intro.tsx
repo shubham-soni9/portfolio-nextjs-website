@@ -16,7 +16,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:mb-0 scroll-mt-[100rem]"
     >
       {/* Main Content - Horizontal Layout */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
@@ -45,7 +45,7 @@ export default function Intro() {
           <h1 className="mb-6 text-2xl font-medium !leading-[1.5] sm:text-3xl lg:text-4xl">
             <span className="font-bold">Hello, I'm Shubham.</span> I'm an{" "}
             <span className="font-bold">Android Developer</span> with{" "}
-            <span className="font-bold">7+ years</span> of experience building mobile apps.
+            <span className="font-bold">8+ years</span> of experience building mobile apps.
           </h1>
 
           {/* Skills Section - Horizontal Layout */}
