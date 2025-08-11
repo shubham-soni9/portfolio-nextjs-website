@@ -17,75 +17,85 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+      {/* Debug div to test visibility */}
+      <div className="bg-red-500 p-4 text-white mb-4">
+        Experience Component is rendering - {experiencesData.length} experiences found
+      </div>
+      
       <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline lineColor="">
-        {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
-            <VerticalTimelineElement
-              contentStyle={{
-                background:
-                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
-                boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "left",
-                padding: "1.5rem 2rem",
-              }}
-              contentArrowStyle={{
-                borderRight:
-                  theme === "light"
-                    ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
-              }}
-              date={item.date}
-              icon={item.icon}
-              iconStyle={{
-                background:
-                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-                fontSize: "1.5rem",
-              }}
-            >
-              <div className="space-y-3">
-                {/* Title and Location */}
-                <div>
-                  <h3 className="font-semibold capitalize text-lg">{item.title}</h3>
-                  <p className="font-medium text-gray-600 dark:text-gray-300">{item.location}</p>
-                </div>
+      
+      {/* Vertical timeline with explicit visibility styles */}
+      <div className="relative" style={{ opacity: 1, visibility: 'visible' }}>
+        <VerticalTimeline lineColor="">
+          {experiencesData.map((item, index) => (
+            <React.Fragment key={index}>
+              <VerticalTimelineElement
+                contentStyle={{
+                  background:
+                    theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                  boxShadow: "none",
+                  border: "1px solid rgba(0, 0, 0, 0.05)",
+                  textAlign: "left",
+                  padding: "1.5rem 2rem",
+                  opacity: 1,
+                  visibility: 'visible',
+                }}
+                contentArrowStyle={{
+                  borderRight:
+                    theme === "light"
+                      ? "0.4rem solid #9ca3af"
+                      : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                }}
+                date={item.date}
+                icon={item.icon}
+                iconStyle={{
+                  background:
+                    theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+                  fontSize: "1.5rem",
+                  opacity: 1,
+                  visibility: 'visible',
+                }}
+              >
+                <div className="space-y-3">
+                  <div>
+                    <h3 className="font-semibold capitalize text-lg">{item.title}</h3>
+                    <p className="font-medium text-gray-600 dark:text-gray-300">{item.location}</p>
+                  </div>
 
-                {/* Key Achievements */}
-                <div>
-                  <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-200 mb-2">
-                    Key Achievements:
-                  </h4>
-                  <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                    {getKeyAchievements(item.description).map((achievement, idx) => (
-                      <li key={idx} className="leading-relaxed">{achievement}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Technologies & Skills */}
-                {getTechnologies(item.description).length > 0 && (
                   <div>
                     <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-200 mb-2">
-                      Technologies & Skills:
+                      Key Achievements:
                     </h4>
-                    <div className="flex flex-wrap gap-1">
-                      {getTechnologies(item.description).map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full text-gray-700 dark:text-gray-300"
-                        >
-                          {tech}
-                        </span>
+                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-300">
+                      {getKeyAchievements(item.description).map((achievement, idx) => (
+                        <li key={idx} className="leading-relaxed">{achievement}</li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
-                )}
-              </div>
-            </VerticalTimelineElement>
-          </React.Fragment>
-        ))}
-      </VerticalTimeline>
+
+                  {getTechnologies(item.description).length > 0 && (
+                    <div>
+                      <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-200 mb-2">
+                        Technologies & Skills:
+                      </h4>
+                      <div className="flex flex-wrap gap-1">
+                        {getTechnologies(item.description).map((tech, idx) => (
+                          <span
+                            key={idx}
+                            className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full text-gray-700 dark:text-gray-300"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </VerticalTimelineElement>
+            </React.Fragment>
+          ))}
+        </VerticalTimeline>
+      </div>
     </section>
   );
 }

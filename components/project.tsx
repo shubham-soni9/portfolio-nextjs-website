@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -16,20 +15,10 @@ export default function Project({
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isImageExpanded, setIsImageExpanded] = useState(false);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
-      }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <section 
@@ -131,6 +120,6 @@ export default function Project({
           </div>
         </div>
       )}
-    </motion.div>
+    </div>
   );
 }
