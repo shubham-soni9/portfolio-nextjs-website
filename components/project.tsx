@@ -5,7 +5,7 @@ import { projectsData } from "@/lib/data";
 export default function Project() {
   return (
     <div className="overflow-x-auto">
-      <table className="w-full min-w-[800px] border-collapse bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+      <table className="w-full min-w-[1200px] border-collapse bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg">
         <thead className="bg-gray-100 dark:bg-gray-800">
           <tr>
             <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
