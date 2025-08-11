@@ -8,10 +8,10 @@ export default function Project() {
       <table className="w-full table-fixed border-collapse bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg">
         <thead className="bg-gray-100 dark:bg-gray-800">
           <tr>
-            <th className="w-[25%] px-2 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
+            <th className="w-[23%] px-2 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
               Project Name
             </th>
-            <th className="w-[18%] px-2 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
+            <th className="w-[22%] px-2 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
               Company
             </th>
             <th className="w-[12%] px-2 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
@@ -20,7 +20,7 @@ export default function Project() {
             <th className="w-[12%] px-2 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
               Type
             </th>
-            <th className="w-[18%] px-2 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
+            <th className="w-[16%] px-2 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
               Industry
             </th>
             <th className="w-[15%] px-2 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
