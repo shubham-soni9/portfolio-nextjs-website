@@ -5,14 +5,16 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, BsMoon, BsSun } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { useTheme } from "@/context/theme-context";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[999] bg-white/80 backdrop-blur-md border-b border-gray-200 dark:bg-gray-950/80 dark:border-gray-800">
@@ -86,6 +88,19 @@ export default function Header() {
             >
               <MdEmail className="text-xl" />
             </a>
+
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 dark:text-gray-400 dark:hover:text-white"
+              aria-label="Toggle theme"
+            >
+              {theme === "light" ? (
+                <BsMoon className="text-xl" />
+              ) : (
+                <BsSun className="text-xl" />
+              )}
+            </button>
           </div>
 
 
