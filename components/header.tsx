@@ -25,9 +25,9 @@ export default function Header() {
              </span>
            </div>
 
-           {/* Navigation Links - Centered */}
-           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
-             <div className="flex items-center space-x-8">
+                       {/* Navigation Links - Left Aligned */}
+            <div className="hidden md:block ml-8">
+              <div className="flex items-center space-x-8">
                {links.map((link) => (
                  <Link
                    key={link.hash}
