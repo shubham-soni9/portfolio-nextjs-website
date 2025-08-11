@@ -53,12 +53,12 @@ export default function Header() {
            </div>
 
            {/* Action Buttons - Aligned to right */}
-           <div className="flex items-center space-x-4 ml-auto">
+           <div className="flex items-center space-x-2 sm:space-x-4 ml-auto">
             <a
               href="/CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200 dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700"
+              className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200 dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700"
             >
               <HiDownload className="text-lg" />
               <span className="hidden sm:inline">Download CV</span>
@@ -68,37 +68,37 @@ export default function Header() {
               href="https://www.linkedin.com/in/shubhamsonicse/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-gray-600 hover:text-blue-600 transition-colors duration-200 dark:text-gray-400 dark:hover:text-blue-400"
+              className="p-1.5 sm:p-2 text-gray-600 hover:text-blue-600 transition-colors duration-200 dark:text-gray-400 dark:hover:text-blue-400"
             >
-              <BsLinkedin className="text-xl" />
+              <BsLinkedin className="text-lg sm:text-xl" />
             </a>
 
             <a
               href="https://github.com/shubham-soni9"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 dark:text-gray-400 dark:hover:text-white"
+              className="p-1.5 sm:p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 dark:text-gray-400 dark:hover:text-white"
             >
-              <FaGithubSquare className="text-xl" />
+              <FaGithubSquare className="text-lg sm:text-xl" />
             </a>
 
             <a
               href="mailto:shubhamsonicse@gmail.com"
-              className="p-2 text-gray-600 hover:text-red-600 transition-colors duration-200 dark:text-gray-400 dark:hover:text-red-400"
+              className="p-1.5 sm:p-2 text-gray-600 hover:text-red-600 transition-colors duration-200 dark:text-gray-400 dark:hover:text-red-400"
             >
-              <MdEmail className="text-xl" />
+              <MdEmail className="text-lg sm:text-xl" />
             </a>
 
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 dark:text-gray-400 dark:hover:text-white"
+              className="p-1.5 sm:p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 dark:text-gray-400 dark:hover:text-white"
               aria-label="Toggle theme"
             >
               {theme === "light" ? (
-                <BsMoon className="text-xl" />
+                <BsMoon className="text-lg sm:text-xl" />
               ) : (
-                <BsSun className="text-xl" />
+                <BsSun className="text-lg sm:text-xl" />
               )}
             </button>
           </div>
