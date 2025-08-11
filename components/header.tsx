@@ -5,6 +5,9 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+import { FaGithubSquare } from "react-icons/fa";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -18,7 +21,7 @@ export default function Header() {
       ></div>
 
       <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <ul className="flex w-[28rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <li
               className="h-3/4 flex items-center justify-center relative"
@@ -48,6 +51,45 @@ export default function Header() {
               </Link>
             </li>
           ))}
+          
+          {/* Download CV */}
+          <li className="h-3/4 flex items-center justify-center relative">
+            <a
+              className="flex w-full items-center justify-center gap-2 px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
+              href="/CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <HiDownload className="text-lg" />
+              <span className="hidden sm:inline">CV</span>
+            </a>
+          </li>
+
+          {/* LinkedIn */}
+          <li className="h-3/4 flex items-center justify-center relative">
+            <a
+              className="flex w-full items-center justify-center gap-2 px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
+              href="https://www.linkedin.com/in/shubhamsonicse/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLinkedin className="text-lg" />
+              <span className="hidden sm:inline">LinkedIn</span>
+            </a>
+          </li>
+
+          {/* GitHub */}
+          <li className="h-3/4 flex items-center justify-center relative">
+            <a
+              className="flex w-full items-center justify-center gap-2 px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
+              href="https://github.com/shubham-soni9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithubSquare className="text-lg" />
+              <span className="hidden sm:inline">GitHub</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
