@@ -13,3 +13,30 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+/* Ensure vertical timeline components are visible */
+.vertical-timeline {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.vertical-timeline-element {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.vertical-timeline-element-content {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.vertical-timeline-element-icon {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Ensure all sections are visible */
+section {
+  opacity: 1 !important;
+  visibility: visible !important;
+}

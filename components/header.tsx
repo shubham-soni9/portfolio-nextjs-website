@@ -1,64 +1,97 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+import { FaGithubSquare } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
   return (
-    <header className="z-[999] relative">
-      <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
+    <header className="fixed top-0 left-0 right-0 z-[999] bg-white/80 backdrop-blur-md border-b border-gray-200 dark:bg-gray-950/80 dark:border-gray-800">
+             <nav className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+         <div className="flex items-center justify-between h-16 w-full">
+           {/* Logo/Name - Aligned to left */}
+           <div className="flex-shrink-0">
+             <span className="text-xl font-bold text-gray-900 dark:text-white">
+               Shubham Soni
+             </span>
+           </div>
 
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+                       {/* Navigation Links - Left Aligned */}
+            <div className="hidden md:block ml-8">
+              <div className="flex items-center space-x-8">
+               {links.map((link) => (
+                 <Link
+                   key={link.hash}
+                   href={link.hash}
+                   className={clsx(
+                     "text-sm font-medium transition-colors duration-200",
+                     {
+                       "text-blue-600 dark:text-blue-400": activeSection === link.name,
+                       "text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white": activeSection !== link.name,
+                     }
+                   )}
+                   onClick={() => {
+                     setActiveSection(link.name);
+                     setTimeOfLastClick(Date.now());
+                   }}
+                 >
+                   {link.name}
+                 </Link>
+               ))}
+             </div>
+           </div>
+
+           {/* Action Buttons - Aligned to right */}
+           <div className="flex items-center space-x-4 ml-auto">
+            <a
+              href="/CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200 dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700"
             >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
-                  {
-                    "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                {link.name}
+              <HiDownload className="text-lg" />
+              <span className="hidden sm:inline">Download CV</span>
+            </a>
 
-                {link.name === activeSection && (
-                  <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
+            <a
+              href="https://www.linkedin.com/in/shubhamsonicse/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-gray-600 hover:text-blue-600 transition-colors duration-200 dark:text-gray-400 dark:hover:text-blue-400"
+            >
+              <BsLinkedin className="text-xl" />
+            </a>
+
+            <a
+              href="https://github.com/shubham-soni9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 dark:text-gray-400 dark:hover:text-white"
+            >
+              <FaGithubSquare className="text-xl" />
+            </a>
+
+            <a
+              href="mailto:shubhamsonicse@gmail.com"
+              className="p-2 text-gray-600 hover:text-red-600 transition-colors duration-200 dark:text-gray-400 dark:hover:text-red-400"
+            >
+              <MdEmail className="text-xl" />
+            </a>
+          </div>
+
+
+        </div>
+
+
       </nav>
     </header>
   );

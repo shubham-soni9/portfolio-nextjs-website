@@ -2,124 +2,98 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", 0.5);
   const { theme } = useTheme();
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline lineColor="">
-        {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
-            <VerticalTimelineElement
-              contentStyle={{
-                background:
-                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
-                boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "left",
-                padding: "1.5rem 2rem",
-              }}
-              contentArrowStyle={{
-                borderRight:
-                  theme === "light"
-                    ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
-              }}
-              date={item.date}
-              icon={item.icon}
-              iconStyle={{
-                background:
-                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-                fontSize: "1.5rem",
-              }}
+    <section id="experience" ref={ref} className="scroll-mt-28 mb-14 sm:mb-40">
+      <div className="max-w-6xl mx-auto">
+        <SectionHeading>My experience</SectionHeading>
+        
+        <div className="space-y-8 w-full">
+          {experiencesData.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white/50 dark:bg-white/5 rounded-lg p-6 border border-gray-200 dark:border-white/10 hover:bg-white/70 dark:hover:bg-white/10 transition-colors"
             >
-              <div className="space-y-3">
-                {/* Title and Location */}
+              {/* Header */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                 <div>
-                  <h3 className="font-semibold capitalize text-lg">{item.title}</h3>
-                  <p className="font-medium text-gray-600 dark:text-gray-300">{item.location}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 font-medium">
+                    {item.location}
+                  </p>
                 </div>
-
-                {/* Key Achievements */}
-                <div>
-                  <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-200 mb-2">
-                    Key Achievements:
-                  </h4>
-                  <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                    {getKeyAchievements(item.description).map((achievement, idx) => (
-                      <li key={idx} className="leading-relaxed">{achievement}</li>
-                    ))}
-                  </ul>
+                <div className="mt-2 sm:mt-0">
+                  <span className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
+                    {item.date}
+                  </span>
                 </div>
-
-                {/* Technologies & Skills */}
-                {getTechnologies(item.description).length > 0 && (
-                  <div>
-                    <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-200 mb-2">
-                      Technologies & Skills:
-                    </h4>
-                    <div className="flex flex-wrap gap-1">
-                      {getTechnologies(item.description).map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full text-gray-700 dark:text-gray-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
-            </VerticalTimelineElement>
-          </React.Fragment>
-        ))}
-      </VerticalTimeline>
+
+              {/* Key Highlights */}
+              <div className="space-y-3">
+                {getKeyHighlights(item.description).map((highlight, idx) => (
+                  <div key={idx} className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                      {highlight}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Technologies */}
+              {getTechnologies(item.description).length > 0 && (
+                <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
+                  <div className="flex flex-wrap gap-2">
+                    {getTechnologies(item.description).map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
 
-// Helper function to extract key achievements from description
-function getKeyAchievements(description: string): string[] {
-  const achievements: string[] = [];
+// Helper function to extract key highlights from description
+function getKeyHighlights(description: string): string[] {
+  const highlights: string[] = [];
   
-  // Extract metrics and key accomplishments
-  const metrics = description.match(/(\d+%?|\d+[Kk]|\d+[Mm]|\d+ lakh|\d+ million)/g);
-  const keyPhrases = [
-    'increased', 'reduced', 'improved', 'boosted', 'achieved', 'delivered', 
-    'maintained', 'led', 'developed', 'implemented', 'created', 'optimized'
-  ];
-  
-  // Split description into sentences and filter for achievements
+  // Extract sentences with metrics and achievements
   const sentences = description.split(/[.!?]+/).filter(s => s.trim().length > 0);
   
   sentences.forEach(sentence => {
     const trimmed = sentence.trim();
-    if (trimmed.length > 10) {
-      // Check if sentence contains metrics or key action words
-      const hasMetrics = metrics?.some(metric => trimmed.includes(metric));
-      const hasKeyPhrase = keyPhrases.some(phrase => 
-        trimmed.toLowerCase().includes(phrase)
-      );
+    if (trimmed.length > 15) {
+      // Look for sentences with numbers, percentages, or key achievements
+      const hasMetrics = /\d+%?|\d+[Kk]|\d+[Mm]|\d+ lakh|\d+ million/.test(trimmed);
+      const hasAchievement = /increased|reduced|improved|boosted|achieved|delivered|maintained|led|developed|implemented|created|optimized/i.test(trimmed);
       
-      if (hasMetrics || hasKeyPhrase) {
-        achievements.push(trimmed);
+      if (hasMetrics || hasAchievement) {
+        highlights.push(trimmed);
       }
     }
   });
   
-  return achievements.slice(0, 4); // Limit to 4 key achievements
+  return highlights.slice(0, 3); // Limit to 3 key highlights
 }
 
 // Helper function to extract technologies from description

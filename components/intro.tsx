@@ -2,121 +2,128 @@
 
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
+  const coreSkills = ["Kotlin", "Java", "Android SDK"];
+  const architectureSkills = ["MVVM", "Clean Architecture", "Multi-Module"];
+  const modernSkills = ["Jetpack Compose", "Coroutines", "RxJava", "Room"];
+  const toolsSkills = ["Firebase", "Flutter"];
 
   return (
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-20 w-full text-center sm:mb-0 scroll-mt-28"
     >
-      <div className="flex items-center justify-center">
-        <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}
-          >
-            <Image
-              src="/profile.jpg"
-              alt="Shubham Soni"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
-              className="h-32 w-32 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
-            />
-          </motion.div>
+      <div className="max-w-6xl mx-auto">
+        {/* Profile Image and Header Section */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 mb-12">
+          
+          {/* Profile Image Section */}
+          <div className="flex-shrink-0">
+            <div className="relative">
+              <Image
+                src="/profile.jpg"
+                alt="Shubham Soni"
+                width="192"
+                height="192"
+                quality="95"
+                priority={true}
+                className="h-32 w-32 lg:h-40 lg:w-40 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              />
+              <span className="absolute bottom-0 right-0 text-4xl">
+                👋
+              </span>
+            </div>
+          </div>
 
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
+          {/* Header Content */}
+          <div className="flex-1">
+            <h1 className="mb-6 text-2xl font-medium !leading-[1.5] sm:text-2xl md:text-3xl lg:text-4xl">
+              <span className="font-bold">Hello, I'm Shubham. </span>  
+              An experienced <span className="font-bold">Android Developer</span> with over  
+              <span className="font-bold"> 8 years</span> of expertise in designing, developing, and delivering  
+              high-quality applications that drive results.
+            </h1>
+          </div>
+        </div>
+
+        {/* Skills Section - Now positioned below the image and header */}
+        <div className="mt-0">   
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Core Technologies */}
+            <div className="bg-white/50 dark:bg-white/5 rounded-lg p-4 border border-gray-200 dark:border-white/10">
+              <h3 className="text-sm font-semibold text-gray-700 dark:text-white/80 mb-3">
+                Languages & Platform
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {coreSkills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Architecture & Patterns */}
+            <div className="bg-white/50 dark:bg-white/5 rounded-lg p-4 border border-gray-200 dark:border-white/10">
+              <h3 className="text-sm font-semibold text-gray-700 dark:text-white/80 mb-3">
+                Architecture & Patterns
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {architectureSkills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Modern Android */}
+            <div className="bg-white/50 dark:bg-white/5 rounded-lg p-4 border border-gray-200 dark:border-white/10">
+              <h3 className="text-sm font-semibold text-gray-700 dark:text-white/80 mb-3">
+                Modern Android
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {modernSkills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300 px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools & Platforms */}
+            <div className="bg-white/50 dark:bg-white/5 rounded-lg p-4 border border-gray-200 dark:border-white/10">
+              <h3 className="text-sm font-semibold text-gray-700 dark:text-white/80 mb-3">
+                Tools & Platforms
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {toolsSkills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold">Hello, I'm an Android Developer.</span> I'm a{" "}
-        <span className="font-bold">Software Engineer</span> with{" "}
-        <span className="font-bold">7+ years</span> of experience. I enjoy
-        building <span className="italic">mobile apps & products</span>. My focus is{" "}
-        <span className="underline">Android (Kotlin/Java)</span>.
-      </motion.h1>
-
-      <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
-
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/shubhamsonicse/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/shubham-soni9"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithubSquare />
-        </a>
-      </motion.div>
     </section>
   );
 }
