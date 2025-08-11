@@ -41,11 +41,11 @@ export default function Intro() {
 
         {/* Header Content */}
         <div className="flex-1">
-          <h1 className="mb-6 text-2xl font-medium !leading-[1.5] sm:text-3xl lg:text-4xl">
+          <h1 className="mb-6 text-2xl font-medium !leading-[1.5] sm:text-2xl md:text-3xl lg:text-4xl">
             <span className="font-bold">Hello, I'm Shubham.</span>  
             An experienced <span className="font-bold">Android Developer</span> with over  
             <span className="font-bold"> 8 years</span> of expertise in designing, developing, and delivering  
-            high-quality mobile applications that drive results.
+            high-quality applications that drive results.
           </h1>
         </div>
       </div>
