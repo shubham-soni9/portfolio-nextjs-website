@@ -42,7 +42,7 @@ export default function Intro() {
         {/* Header Content */}
         <div className="flex-1">
           <h1 className="mb-6 text-2xl font-medium !leading-[1.5] sm:text-2xl md:text-3xl lg:text-4xl">
-            <span className="font-bold">Hello, I'm Shubham.</span>  
+            <span className="font-bold">Hello, I'm Shubham. </span>  
             An experienced <span className="font-bold">Android Developer</span> with over  
             <span className="font-bold"> 8 years</span> of expertise in designing, developing, and delivering  
             high-quality applications that drive results.
@@ -51,11 +51,7 @@ export default function Intro() {
       </div>
 
       {/* Skills Section - Now positioned below the image and header */}
-      <div className="mt-2">
-        <h2 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-white/80">
-          Core Skills
-        </h2>
-        
+      <div className="mt-0">   
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Core Technologies */}
           <div className="bg-white/50 dark:bg-white/5 rounded-lg p-4 border border-gray-200 dark:border-white/10">
