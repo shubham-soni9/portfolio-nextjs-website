@@ -13,6 +13,11 @@ export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
+  const coreSkills = ["Kotlin", "Java", "Android SDK"];
+  const architectureSkills = ["MVVM", "Clean Architecture", "Multi-Module"];
+  const modernSkills = ["Jetpack Compose", "Coroutines", "RxJava", "Room"];
+  const toolsSkills = ["Firebase", "Flutter"];
+
   return (
     <section
       ref={ref}
@@ -39,13 +44,101 @@ export default function Intro() {
         </div>
       </div>
 
-      <h1 className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl">
-        <span className="font-bold">Hello, I'm an Android Developer.</span> I'm a{" "}
-        <span className="font-bold">Software Engineer</span> with{" "}
-        <span className="font-bold">7+ years</span> of experience. I enjoy
-        building <span className="italic">mobile apps & products</span>. My focus is{" "}
-        <span className="underline">Android (Kotlin/Java)</span>.
+      <h1 className="mb-6 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl">
+        <span className="font-bold">Hello, I'm Shubham.</span> I'm an{" "}
+        <span className="font-bold">Android Developer</span> with{" "}
+        <span className="font-bold">7+ years</span> of experience building mobile apps.
       </h1>
+
+      <div className="mb-8 px-4 text-base sm:text-lg leading-relaxed">
+        <p className="mb-4">
+          I've worked at <span className="font-medium">Freshworks, Meesho, Rebel Foods</span> and{" "}
+          <span className="font-medium">Jugnoo</span>, scaling products to{" "}
+          <span className="font-medium">10+ million users</span>. Expert in{" "}
+          <span className="font-medium">Kotlin, Java, Android SDK</span> with experience in{" "}
+          <span className="font-medium">SaaS, E-commerce, Food & Delivery</span> domains.
+        </p>
+        
+        <p>
+          Passionate about <span className="font-medium">AI, open source</span> and staying updated with{" "}
+          <span className="font-medium">mobile development trends</span>.
+        </p>
+      </div>
+
+      {/* Skills Section */}
+      <div className="mb-8 px-4">
+        <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white/80">
+          Core Skills
+        </h2>
+        
+        {/* Core Technologies */}
+        <div className="mb-4">
+          <h3 className="text-sm font-medium text-gray-600 dark:text-white/60 mb-2">
+            Languages & Platform
+          </h3>
+          <div className="flex flex-wrap justify-center gap-2">
+            {coreSkills.map((skill, index) => (
+              <span
+                key={index}
+                className="bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Architecture & Patterns */}
+        <div className="mb-4">
+          <h3 className="text-sm font-medium text-gray-600 dark:text-white/60 mb-2">
+            Architecture & Patterns
+          </h3>
+          <div className="flex flex-wrap justify-center gap-2">
+            {architectureSkills.map((skill, index) => (
+              <span
+                key={index}
+                className="bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 px-3 py-1 rounded-full text-sm font-medium"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Modern Android */}
+        <div className="mb-4">
+          <h3 className="text-sm font-medium text-gray-600 dark:text-white/60 mb-2">
+            Modern Android
+          </h3>
+          <div className="flex flex-wrap justify-center gap-2">
+            {modernSkills.map((skill, index) => (
+              <span
+                key={index}
+                className="bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300 px-3 py-1 rounded-full text-sm font-medium"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Tools & Platforms */}
+        <div className="mb-4">
+          <h3 className="text-sm font-medium text-gray-600 dark:text-white/60 mb-2">
+            Tools & Platforms
+          </h3>
+          <div className="flex flex-wrap justify-center gap-2">
+            {toolsSkills.map((skill, index) => (
+              <span
+                key={index}
+                className="bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 px-3 py-1 rounded-full text-sm font-medium"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium">
         <Link
