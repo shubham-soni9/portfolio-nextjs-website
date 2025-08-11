@@ -8,6 +8,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import { BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -77,6 +78,13 @@ export default function Header() {
               className="p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 dark:text-gray-400 dark:hover:text-white"
             >
               <FaGithubSquare className="text-xl" />
+            </a>
+
+            <a
+              href="mailto:shubhamsonicse@gmail.com"
+              className="p-2 text-gray-600 hover:text-red-600 transition-colors duration-200 dark:text-gray-400 dark:hover:text-red-400"
+            >
+              <MdEmail className="text-xl" />
             </a>
           </div>
 
