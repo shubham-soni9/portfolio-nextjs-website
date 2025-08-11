@@ -53,7 +53,7 @@ export default function Intro() {
 
       {/* Skills Section - Now positioned below the image and header */}
       <div className="mt-2">
-        <h2 className="text-lg font-semibold mb-6 text-gray-800 dark:text-white/80">
+        <h2 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-white/80">
           Core Skills
         </h2>
         
