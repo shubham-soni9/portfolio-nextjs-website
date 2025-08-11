@@ -14,83 +14,106 @@ export default function Header() {
     useActiveSectionContext();
 
   return (
-    <header className="z-[999] relative">
-      <div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
-        style={{ transform: "translateX(-50%)" }}
-      ></div>
+    <header className="fixed top-0 left-0 right-0 z-[999] bg-white/80 backdrop-blur-md border-b border-gray-200 dark:bg-gray-950/80 dark:border-gray-800">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo/Name */}
+          <div className="flex-shrink-0">
+            <span className="text-xl font-bold text-gray-900 dark:text-white">
+              Shubham Soni
+            </span>
+          </div>
 
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[28rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
-            <li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
+          {/* Navigation Links */}
+          <div className="hidden md:block">
+            <div className="flex items-center space-x-8">
+              {links.map((link) => (
+                <Link
+                  key={link.hash}
+                  href={link.hash}
+                  className={clsx(
+                    "text-sm font-medium transition-colors duration-200",
+                    {
+                      "text-blue-600 dark:text-blue-400": activeSection === link.name,
+                      "text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white": activeSection !== link.name,
+                    }
+                  )}
+                  onClick={() => {
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                  }}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex items-center space-x-4">
+            <a
+              href="/CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200 dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700"
             >
+              <HiDownload className="text-lg" />
+              <span className="hidden sm:inline">Download CV</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/shubhamsonicse/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-gray-600 hover:text-blue-600 transition-colors duration-200 dark:text-gray-400 dark:hover:text-blue-400"
+            >
+              <BsLinkedin className="text-xl" />
+            </a>
+
+            <a
+              href="https://github.com/shubham-soni9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 dark:text-gray-400 dark:hover:text-white"
+            >
+              <FaGithubSquare className="text-xl" />
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button className="p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {links.map((link) => (
               <Link
+                key={link.hash}
+                href={link.hash}
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                  "block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200",
                   {
-                    "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
+                    "text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-900/20": activeSection === link.name,
+                    "text-gray-600 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800": activeSection !== link.name,
                   }
                 )}
-                href={link.hash}
                 onClick={() => {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
               >
                 {link.name}
-
-                {link.name === activeSection && (
-                  <span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                  ></span>
-                )}
               </Link>
-            </li>
-          ))}
-          
-          {/* Download CV */}
-          <li className="h-3/4 flex items-center justify-center relative">
-            <a
-              className="flex w-full items-center justify-center gap-2 px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
-              href="/CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <HiDownload className="text-lg" />
-              <span className="hidden sm:inline">CV</span>
-            </a>
-          </li>
-
-          {/* LinkedIn */}
-          <li className="h-3/4 flex items-center justify-center relative">
-            <a
-              className="flex w-full items-center justify-center gap-2 px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
-              href="https://www.linkedin.com/in/shubhamsonicse/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BsLinkedin className="text-lg" />
-              <span className="hidden sm:inline">LinkedIn</span>
-            </a>
-          </li>
-
-          {/* GitHub */}
-          <li className="h-3/4 flex items-center justify-center relative">
-            <a
-              className="flex w-full items-center justify-center gap-2 px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
-              href="https://github.com/shubham-soni9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithubSquare className="text-lg" />
-              <span className="hidden sm:inline">GitHub</span>
-            </a>
-          </li>
-        </ul>
+            ))}
+          </div>
+        </div>
       </nav>
     </header>
   );
