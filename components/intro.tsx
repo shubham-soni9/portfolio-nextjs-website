@@ -16,7 +16,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-20 w-full text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-20 w-full text-center sm:mb-0 scroll-mt-28"
     >
       {/* Profile Image and Header Section */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 mb-12">
