@@ -55,7 +55,7 @@ export default function Header() {
            {/* Action Buttons - Aligned to right */}
            <div className="flex items-center space-x-2 sm:space-x-4 ml-auto">
             <a
-              href="/CV.pdf"
+              href="/Shubham-Soni-CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200 dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700"
