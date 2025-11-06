@@ -32,7 +32,7 @@ export const experiencesData = [
     description:
       "Leading Android development initiatives at Freshworks, a global SaaS company. Working on enterprise-grade applications with focus on scalability, performance, and user experience. Collaborating with cross-functional teams to deliver high-quality mobile solutions.",
     icon: React.createElement(CgWorkAlt),
-    date: "10/2023 - Present",
+    date: "Oct 2023 - Oct 2025",
   },
   {
     title: "Software Engineer - III",
@@ -40,7 +40,7 @@ export const experiencesData = [
     description:
       "Led the Meesho Android app's design and development with over 100+ million downloads. Increased user experience by working on quality checks, user ratings and reviews which led to a 15% reduction in product returns. Developed using RxJava, Room, 70% Kotlin, and 30% Java, implementing Multi-module MVVM architecture. Boosted build speed by 30% using modular project organisation and clean architecture. Executed optimizations to reduce API costs achieving 12-15% monthly reduction and cost savings of 100K dollars. Implemented measures to reduce APK size by 40% and address ANR for app optimisation. Drove 25% higher user engagement with innovative widgets and improved search screens. Slashed 30% time of deployment with robust code reviews and CI/CD pipelines.",
     icon: React.createElement(CgWorkAlt),
-    date: "03/2022 - 06/2023",
+    date: "March 2022 - June 2023",
   },
   {
     title: "Software Engineer - II",
@@ -48,7 +48,7 @@ export const experiencesData = [
     description:
       "Redesigned and developed a new product from scratch known as Eatsure. Headed a team from architectural decision to finished product with 99.5% crash-free users maintained with 10m+ downloads. Implemented Slay Coffee app from scratch independently in 3 months with coroutine and jetpack components. Achieved 30% fewer bug reports and 15% app performance improvement in live projects like Over Story and Behrouz Biryani.",
     icon: React.createElement(CgWorkAlt),
-    date: "02/2020 - 02/2022",
+    date: "Feb 2020 - Feb 2022",
   },
   {
     title: "Software Engineer - I",
@@ -56,7 +56,7 @@ export const experiencesData = [
     description:
       "Designed and implemented 3 delivery applications Agent, Manager and Customer app under a single product Tookan for handling 1500+ businesses that required 3 lakh delivery drivers. Delivered all projects on time, including Yelo Marketspace (20% increase in monthly orders). Created and optimized app experiences for client projects like Honest Bee and Instavans. Maintained a 90% client satisfaction rate by efficiently managing the dev and release cycle with seamless requirements gathering.",
     icon: React.createElement(CgWorkAlt),
-    date: "08/2017 - 01/2020",
+    date: "Aug 2017 - Jan 2020",
   },
   {
     title: "Bachelor of Engineering",
@@ -64,7 +64,7 @@ export const experiencesData = [
     description:
       "Major in Computer science & engineering",
     icon: React.createElement(LuGraduationCap),
-    date: "07/2013 - 07/2017",
+    date: "July 2013 - July 2017",
   },
 ] as const;
 
@@ -77,7 +77,7 @@ export const projectsData = [
     imageUrl: freshdeskImg,
     url: "https://play.google.com/store/apps/details?id=com.freshdesk.helpdesk",
     company: "Freshworks",
-    years: "2023 - Present",
+    years: "2023 - 2025",
     projectType: "Native",
     industry: "SaaS / Customer Support",
     downloads: "100K+",
