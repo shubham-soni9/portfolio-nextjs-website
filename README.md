@@ -2,6 +2,8 @@
 
 A modern, minimalistic, and responsive personal portfolio website built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**. This project showcases my experience, projects, and skills as an Android Developer, featuring a clean design and a working contact form.
 
+**[Live Preview](https://shubhamsoni.dev)**
+
 ![Hero Section](./public/samples/hero-section.avif)
 
 ## 🚀 Features
