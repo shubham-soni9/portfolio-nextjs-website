@@ -10,6 +10,16 @@ import meeshoImg from "@/public/meesho.webp";
 import eatsureImg from "@/public/eatsure.webp";
 import slayImg from "@/public/slay.png";
 
+type OpenSourceProject = {
+  title: string;
+  description: string;
+  platform: string;
+  techStack?: readonly string[];
+  repoUrl: string;
+  liveUrl?: string;
+  relatedRepos?: readonly string[];
+};
+
 export const links = [
   {
     name: "Home",
@@ -184,6 +194,99 @@ export const projectsData = [
     industry: "E-commerce",
     downloads: "50+",
   }
+] as const;
+
+export const openSourceProjectsData: OpenSourceProject[] = [
+  {
+    title: "Apps Analyzer",
+    description:
+      "Android app that scans installed applications and detects the underlying framework using APK analysis and a scoring system, distinguishing Flutter, React Native, Expo, KMM, and native Android apps.",
+    platform: "Native Android",
+    techStack: ["Kotlin", "Jetpack Compose", "Coroutines", "Room", "MVVM"],
+    repoUrl: "https://github.com/shubham-soni9/Apps-Analyzer",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "Personal portfolio built with modern React tooling to showcase Android experience, projects, and skills with dark mode, smooth animations, and a contact form.",
+    platform: "Next.js Website",
+    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "React Email"],
+    repoUrl: "https://github.com/shubham-soni9/portfolio-nextjs-website",
+    liveUrl: "https://shubhamsoni.dev",
+  },
+  {
+    title: "Periodic Table of Elements",
+    description:
+      "Interactive periodic table web app with advanced filtering, detailed element pages, scientist profiles, and built-in chemistry tools like molar mass and electron configuration calculators.",
+    platform: "SvelteKit Website",
+    techStack: ["SvelteKit", "TypeScript", "Tailwind CSS", "Vite"],
+    repoUrl: "https://github.com/shubham-soni9/periodic-table-svelte-website",
+    liveUrl: "https://www.periodictableofelements.cc",
+  },
+  {
+    title: "Finlisted",
+    description:
+      "Production-ready directory and listing SaaS starter kit with authentication, Stripe subscriptions, admin dashboard, blog, changelog, media uploads, and SEO-friendly marketing pages.",
+    platform: "Next.js SaaS",
+    techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
+    repoUrl: "https://github.com/shubham-soni9/finlisted-nextjs-website",
+  },
+  {
+    title: "FastIdea – AI Idea Finder",
+    description:
+      "AI-powered idea generator that creates structured execution blueprints for products, content, marketing, and career growth with clear target audience, problem statement, and next steps.",
+    platform: "Next.js Website",
+    techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "OpenRouter API"],
+    repoUrl: "https://github.com/shubham-soni9/ai-idea-finder-nextjs-website",
+  },
+  {
+    title: "AI Dating Helper",
+    description:
+      "React Native app concept that uses AI to help users craft better profiles and conversations for modern dating platforms.",
+    platform: "React Native App",
+    techStack: ["React Native", "TypeScript", "Expo"],
+    repoUrl: "https://github.com/shubham-soni9/ai-dating-helper-react-native",
+  },
+  {
+    title: "Linkr – URL Shortener Platform",
+    description:
+      "Bitly-style SaaS platform composed of multiple services for link management, redirects, analytics, caching, and an admin console.",
+    platform: "Distributed SaaS",
+    techStack: ["Next.js", "TypeScript", "PostgreSQL", "Redis"],
+    repoUrl: "https://github.com/shubham-soni9/linkr-website",
+    relatedRepos: [
+      "https://github.com/shubham-soni9/linkr-api-service",
+      "https://github.com/shubham-soni9/linkr-redirector",
+      "https://github.com/shubham-soni9/linkr-console",
+      "https://github.com/shubham-soni9/linkr-web-redirector",
+      "https://github.com/shubham-soni9/linkr-analytics",
+      "https://github.com/shubham-soni9/linkr-cache",
+    ],
+  },
+  {
+    title: "Quick Mini Tools",
+    description:
+      "Collection of small, focused utilities similar to an omni-calculator platform, built as a fast Svelte experience.",
+    platform: "Svelte Tools",
+    techStack: ["Svelte", "TypeScript", "Tailwind CSS"],
+    repoUrl: "https://github.com/shubham-soni9/quick-mini-tools",
+  },
+  {
+    title: "Random Name Wheel",
+    description:
+      "Random name picker with an animated wheel experience for giveaways, classrooms, or team rituals.",
+    platform: "Svelte App",
+    techStack: ["Svelte", "TypeScript"],
+    repoUrl: "https://github.com/shubham-soni9/random-names-wheel",
+  },
+  {
+    title: "Pursuit Blog Official",
+    description:
+      "Content-focused Next.js blog setup with a clean layout for long-form articles and engineering stories.",
+    platform: "Next.js Blog",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "MDX"],
+    repoUrl: "https://github.com/shubham-soni9/pursuit-blog-official",
+  },
 ] as const;
 
 export const skillsData = [
