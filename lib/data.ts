@@ -196,7 +196,7 @@ export const projectsData = [
   }
 ] as const;
 
-export const openSourceProjectsData: OpenSourceProject[] = [
+export const openSourceProjectsData: readonly OpenSourceProject[] = [
   {
     title: "Apps Analyzer",
     description:
