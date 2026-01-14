@@ -74,16 +74,18 @@ export default function Project() {
         </table>
       </div>
 
-      <div className="mt-10">
-        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
-          Open source projects
-        </h3>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 max-w-3xl">
-          A curated set of personal open source projects spanning Android apps,
-          full-stack SaaS products, and modern web tools.
-        </p>
+      <div className="mt-20">
+        <div className="flex flex-col items-center justify-center text-center mb-10">
+          <h3 className="text-2xl sm:text-3xl font-medium text-gray-900 dark:text-white mb-4">
+            Open Source Projects
+          </h3>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
+            A curated set of personal open source projects spanning Android apps,
+            full-stack SaaS products, and modern web tools.
+          </p>
+        </div>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {openSourceProjectsData.map((project, index) => (
             <div
               key={index}

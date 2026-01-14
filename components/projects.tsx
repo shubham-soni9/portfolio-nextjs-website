@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <section ref={ref} id="projects" className="sm:mt-12 scroll-mt-28 mb-14">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading>My projects</SectionHeading>
+        <SectionHeading>Company projects</SectionHeading>
         <Project />
       </div>
     </section>
