@@ -198,21 +198,13 @@ export const projectsData = [
 
 export const openSourceProjectsData: readonly OpenSourceProject[] = [
   {
-    title: "Apps Analyzer",
+    title: "FastIdea – AI Idea Finder",
     description:
-      "Android app that scans installed applications and detects the underlying framework using APK analysis and a scoring system, distinguishing Flutter, React Native, Expo, KMM, and native Android apps.",
-    platform: "Native Android",
-    techStack: ["Kotlin", "Jetpack Compose", "Coroutines", "Room", "MVVM"],
-    repoUrl: "https://github.com/shubham-soni9/Apps-Analyzer",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "Personal portfolio built with modern React tooling to showcase Android experience, projects, and skills with dark mode, smooth animations, and a contact form.",
+      "AI-powered idea generator that creates structured execution blueprints for products, content, marketing, and career growth with clear target audience, problem statement, and next steps.",
     platform: "Next.js Website",
-    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "React Email"],
-    repoUrl: "https://github.com/shubham-soni9/portfolio-nextjs-website",
-    liveUrl: "https://shubhamsoni.dev",
+    techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "OpenRouter API"],
+    repoUrl: "https://github.com/shubham-soni9/ai-idea-finder-nextjs-website",
+    liveUrl: "https://www.fastidea.app",
   },
   {
     title: "Periodic Table of Elements",
@@ -224,21 +216,47 @@ export const openSourceProjectsData: readonly OpenSourceProject[] = [
     liveUrl: "https://www.periodictableofelements.cc",
   },
   {
+    title: "Quick Mini Tools",
+    description:
+      "Collection of small, focused utilities similar to an omni-calculator platform, built as a fast Svelte experience.",
+    platform: "Svelte Tools",
+    techStack: ["Svelte", "TypeScript", "Tailwind CSS"],
+    repoUrl: "https://github.com/shubham-soni9/quick-mini-tools",
+    liveUrl: "https://quickminitools.vercel.app/",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "Personal portfolio built with modern React tooling to showcase Android experience, projects, and skills with dark mode, smooth animations, and a contact form.",
+    platform: "Next.js Website",
+    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "React Email"],
+    repoUrl: "https://github.com/shubham-soni9/portfolio-nextjs-website",
+    liveUrl: "https://shubhamsoni.dev",
+  },
+  {
+    title: "Random Name Wheel",
+    description:
+      "Random name picker with an animated wheel experience for giveaways, classrooms, or team rituals.",
+    platform: "Svelte App",
+    techStack: ["Svelte", "TypeScript"],
+    repoUrl: "https://github.com/shubham-soni9/random-names-wheel",
+    liveUrl: "https://random-names-wheel.vercel.app/",
+  },
+  {
+    title: "Apps Analyzer",
+    description:
+      "Android app that scans installed applications and detects the underlying framework using APK analysis and a scoring system, distinguishing Flutter, React Native, Expo, KMM, and native Android apps.",
+    platform: "Native Android",
+    techStack: ["Kotlin", "Jetpack Compose", "Coroutines", "Room", "MVVM"],
+    repoUrl: "https://github.com/shubham-soni9/Apps-Analyzer",
+  },
+  {
     title: "Finlisted",
     description:
       "Production-ready directory and listing SaaS starter kit with authentication, Stripe subscriptions, admin dashboard, blog, changelog, media uploads, and SEO-friendly marketing pages.",
     platform: "Next.js SaaS",
     techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
     repoUrl: "https://github.com/shubham-soni9/finlisted-nextjs-website",
-  },
-  {
-    title: "FastIdea – AI Idea Finder",
-    description:
-      "AI-powered idea generator that creates structured execution blueprints for products, content, marketing, and career growth with clear target audience, problem statement, and next steps.",
-    platform: "Next.js Website",
-    techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "OpenRouter API"],
-    repoUrl: "https://github.com/shubham-soni9/ai-idea-finder-nextjs-website",
-    liveUrl: "https://www.fastidea.app",
   },
   {
     title: "AI Dating Helper",
@@ -265,24 +283,6 @@ export const openSourceProjectsData: readonly OpenSourceProject[] = [
     ],
   },
   {
-    title: "Quick Mini Tools",
-    description:
-      "Collection of small, focused utilities similar to an omni-calculator platform, built as a fast Svelte experience.",
-    platform: "Svelte Tools",
-    techStack: ["Svelte", "TypeScript", "Tailwind CSS"],
-    repoUrl: "https://github.com/shubham-soni9/quick-mini-tools",
-    liveUrl: "https://quickminitools.vercel.app/",
-  },
-  {
-    title: "Random Name Wheel",
-    description:
-      "Random name picker with an animated wheel experience for giveaways, classrooms, or team rituals.",
-    platform: "Svelte App",
-    techStack: ["Svelte", "TypeScript"],
-    repoUrl: "https://github.com/shubham-soni9/random-names-wheel",
-    liveUrl: "https://random-names-wheel.vercel.app/",
-  },
-  {
     title: "Pursuit Blog Official",
     description:
       "Content-focused Next.js blog setup with a clean layout for long-form articles and engineering stories.",
@@ -306,3 +306,25 @@ export const skillsData = [
   "Multi-Module Architecture",
   "Flutter"
 ] as const;
+
+export const currentProject = {
+  title: "FileXhost.com",
+  subtitle: "Simple Static Hosting Platform",
+  description:
+    "A universal file hosting platform that simplifies sharing. Drag & drop any file—HTML, PDF, Images, Videos—and get an instant, secure URL. Features include smart file rendering, auto-generated subdomains, and password protection.",
+  tags: [
+    "Next.js",
+    "CDN Caching",
+    "S3 Handling",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "TypeScript",
+  ],
+  url: "https://www.filexhost.com/",
+  features: [
+    "Universal File Support",
+    "Smart Views & Direct Rendering",
+    "Instant Subdomains",
+    "Free SSL Certificates",
+  ],
+} as const;
