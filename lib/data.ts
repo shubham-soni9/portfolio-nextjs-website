@@ -238,6 +238,7 @@ export const openSourceProjectsData: readonly OpenSourceProject[] = [
     platform: "Next.js Website",
     techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "OpenRouter API"],
     repoUrl: "https://github.com/shubham-soni9/ai-idea-finder-nextjs-website",
+    liveUrl: "https://www.fastidea.app",
   },
   {
     title: "AI Dating Helper",
@@ -270,6 +271,7 @@ export const openSourceProjectsData: readonly OpenSourceProject[] = [
     platform: "Svelte Tools",
     techStack: ["Svelte", "TypeScript", "Tailwind CSS"],
     repoUrl: "https://github.com/shubham-soni9/quick-mini-tools",
+    liveUrl: "https://quickminitools.vercel.app/",
   },
   {
     title: "Random Name Wheel",
@@ -278,6 +280,7 @@ export const openSourceProjectsData: readonly OpenSourceProject[] = [
     platform: "Svelte App",
     techStack: ["Svelte", "TypeScript"],
     repoUrl: "https://github.com/shubham-soni9/random-names-wheel",
+    liveUrl: "https://random-names-wheel.vercel.app/",
   },
   {
     title: "Pursuit Blog Official",
