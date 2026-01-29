@@ -22,10 +22,10 @@ export default function Header() {
          <div className="flex items-center justify-between h-16 w-full">
            {/* Logo/Name - Aligned to left */}
            <div className="flex-shrink-0">
-             <span className="text-xl font-bold text-gray-900 dark:text-white">
-               Shubham Soni
-             </span>
-           </div>
+            <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
+              Shubham Soni
+            </Link>
+          </div>
 
                        {/* Navigation Links - Left Aligned */}
             <div className="hidden md:block ml-8">
